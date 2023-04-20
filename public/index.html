@@ -56,6 +56,10 @@
         button.onclick = () => {
             console.log( google.accounts.id );
             google.accounts.id.disableAutoSelect()
+            google.accounts.id.revoke( localStorage.getItem( 'email', done => {
+                localStorgate.clear();
+                location.reload();
+            }))
         }
 
 
