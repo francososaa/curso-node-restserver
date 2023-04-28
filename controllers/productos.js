@@ -22,7 +22,6 @@ const obtenerProductos = async ( req, res = response ) => {
     });
 }
 
-
 const obtenerProductoID = async ( req, res = response ) => {
 
     const { id } = req.params;
