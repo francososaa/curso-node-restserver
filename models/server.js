@@ -5,6 +5,7 @@ const fileUpload = require('express-fileupload');
 
 const { dbConnection } = require('../database/config');
 
+
 class Server {
 
     constructor(){
@@ -28,6 +29,7 @@ class Server {
 
         // Rutas de mi aplicacion
         this.routes();      
+
     }
     
 
@@ -65,7 +67,7 @@ class Server {
         this.app.use( this.paths.usuarios , require('../routes/usuarios') );
 
     }
-
+  
     listen(){
 
         this.app.listen( this.port, () => {
