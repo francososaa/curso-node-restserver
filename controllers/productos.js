@@ -2,7 +2,7 @@ const { request, response } = require('express');
 const { Producto } = require('../models');
 
 
-const obtenerProductos = async ( req, res = response ) => {
+const obtenerProductos = async ( req = request, res = response ) => {
 
     const { limite = 5, desde = 0 } = req.query;
     const query = { estado : true }
